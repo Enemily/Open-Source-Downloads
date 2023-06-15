@@ -4,7 +4,7 @@ This artifact consists of:
 1. Data collection scripts
 Code was implemented in R and Python 3. The scripts can be used to curate our dataset, first selecting the GitHub projects then gathering data such as downloads, commits, opened and closed issues, contributors, repository size, and whether the project was archived in each month of our observation window. 
 
-    The final output of the scripts is a csv file, where each row is a data point in our survival analysis. Each row represents data per project and per month in our observation window of 2015-01 to 2020-12. Because some of our projects experience the dependent outcome variable (i.e. peaked download counts) before 2020-12, each project takes occupies a different number of rows in our csv file. Required dependencies include pandas, numpy, sqldf, and RMysql. 
+    The final dataset is a csv file ```final_subset.csv``` in ```data.zip```, where each row is a data point in our survival analysis. Each row represents data per project and per month in our observation window of 2015-01 to 2020-12. Because some of our projects experience the dependent outcome variable (i.e. peaked download counts) before 2020-12, each project takes occupies a different number of rows in our csv file. Required dependencies include pandas, numpy, sqldf, and RMysql. 
 
 2. Survival analysis.
 Code was implemented in R. The script ```survival_analysis.R``` builds a Cox Proportional Hazards survival model and a multiple logistic regression model from our dataset. Model diagnostics are also run.
