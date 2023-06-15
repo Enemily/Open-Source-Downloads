@@ -25,7 +25,7 @@ Run ```dataset_curation/get_size.py``` to collect the size of the project reposi
 
 Run ```dataset_curation/check_archived.py``` to collect information about whether and when the repository was archived on GitHub during any month in our observation window. All data points before the project was archived were not labeled as ```archived=TRUE```, while all data points on and after the project was archived were labeled as ```archived=TRUE```. This labeling was implemented in ```dataset_curation/archived_labeling.R```.
 
-# Data analysis.
+# Data analysis
 The final csv used to build the Cox Proportional Hazards model and the multiple logistic regression model has 22 columns, and each row is a single data point in our model, representing a project’s activity on a certain month in our 6-year time window. Variables are listed below. Note that not all columns were included as independent variables in our regression models. The models are built and the diagnostics are run in ```survival_analysis.R```.
 + ```slug```: project repository name
 + ```numIssuesOpened```: number of issues opened each month
